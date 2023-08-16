@@ -1,7 +1,5 @@
+import Wrapper from "@/components/Wrapper";
+
 export default function HomePage() {
-  return (
-    <div>
-      <h1>Hello from Next.js</h1>
-    </div>
-  );
+  return <Wrapper></Wrapper>;
 }
