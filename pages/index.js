@@ -1,7 +1,10 @@
+import ArtGenerator from "@/components/ArtGenerator";
+import Wrapper from "@/components/Wrapper";
+
 export default function HomePage() {
   return (
-    <div>
-      <h1>Hello from Next.js</h1>
-    </div>
+    <Wrapper>
+      <ArtGenerator />
+    </Wrapper>
   );
 }
