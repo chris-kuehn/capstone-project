@@ -1,18 +1,12 @@
 import styled from "styled-components";
-import ArtGenerator from "./ArtGenerator";
 
-export default function Wrapper() {
-  return (
-    <StyledDiv>
-      <ArtGenerator />
-    </StyledDiv>
-  );
+export default function Wrapper({ children }) {
+  return <StyledWrapper>{children}</StyledWrapper>;
 }
 
-const StyledDiv = styled.div`
-  color: green;
+const StyledWrapper = styled.div`
   background-color: white;
-  width: 376px;
+  width: 375px;
   min-height: 100vh;
   margin: 0 auto;
   padding: 32px;
