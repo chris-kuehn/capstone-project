@@ -22,33 +22,33 @@ export default function CanvasOne() {
   const [backgroundColor, setBackgroundColor] = useState(148);
   useEffect(() => {
     const canvas = canvasRef.current;
-    const ctx = canvas.getContext("2d");
+    const context = canvas.getContext("2d");
     // Beginn drawing statements
-    ctx.fillStyle = `hsl(${backgroundColor}, 60%, 95%)`;
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    context.fillStyle = `hsl(${backgroundColor}, 60%, 95%)`;
+    context.fillRect(0, 0, canvas.width, canvas.height);
 
-    ctx.fillStyle = "hsl(148, 100%, 50%)";
-    ctx.translate(150, 150);
-    ctx.rotate((0 * Math.PI) / 180);
-    ctx.fillRect(-40, -40, 80, 80);
+    context.fillStyle = "hsl(148, 100%, 50%)";
+    context.translate(150, 150);
+    context.rotate((0 * Math.PI) / 180);
+    context.fillRect(-40, -40, 80, 80);
 
-    ctx.lineWidth = firstLineWidth;
+    context.lineWidth = firstLineWidth;
 
-    ctx.strokeStyle = `hsl(${backgroundColor}, 60%, 95%)`;
-    ctx.strokeRect(-22.5, -22.5, 45, 45);
+    context.strokeStyle = `hsl(${backgroundColor}, 60%, 95%)`;
+    context.strokeRect(-22.5, -22.5, 45, 45);
 
-    ctx.strokeStyle = "hsl(148, 100%, 50%)";
-    ctx.lineWidth = secondLineWidth;
-    ctx.strokeRect(-60, -60, 120, 120);
+    context.strokeStyle = "hsl(148, 100%, 50%)";
+    context.lineWidth = secondLineWidth;
+    context.strokeRect(-60, -60, 120, 120);
 
-    ctx.lineWidth = thirdLineWidth;
-    ctx.strokeRect(-80, -80, 160, 160);
+    context.lineWidth = thirdLineWidth;
+    context.strokeRect(-80, -80, 160, 160);
 
-    ctx.lineWidth = fourthLineWidth;
-    ctx.strokeRect(-100, -100, 200, 200);
+    context.lineWidth = fourthLineWidth;
+    context.strokeRect(-100, -100, 200, 200);
 
     // Reset the transformation matrix to the identity matrix
-    ctx.setTransform(1, 0, 0, 1, 0, 0);
+    context.setTransform(1, 0, 0, 1, 0, 0);
     // End drawing statements
   }, [backgroundColor]);
   return (
