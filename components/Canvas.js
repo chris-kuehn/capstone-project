@@ -49,22 +49,13 @@ export default function Canvas() {
     context.strokeStyle = `hsl(${color}, 100%, 50%)`;
 
     for (let i = 0; i <= outline - 1; i++) {
-      let x = -60 - 20 * i;
-      let y = -60 - 20 * i;
+      let coordinateOnXAxis = -60 - 20 * i;
+      let coordinateOnYAxis = -60 - 20 * i;
       let width = 120 + 40 * i;
       let height = 120 + 40 * i;
       context.lineWidth = variation[i];
-      context.strokeRect(x, y, width, height);
+      context.strokeRect(coordinateOnXAxis, coordinateOnYAxis, width, height);
     }
-
-    // context.lineWidth = variation.secondLineWidth;
-    // context.strokeRect(-60, -60, 120, 120);
-
-    // context.lineWidth = variation.thirdLineWidth;
-    // context.strokeRect(-80, -80, 160, 160);
-
-    // context.lineWidth = variation.fourthLineWidth;
-    // context.strokeRect(-100, -100, 200, 200);
 
     // Reset the transformation matrix to the identity matrix
     context.setTransform(1, 0, 0, 1, 0, 0);
