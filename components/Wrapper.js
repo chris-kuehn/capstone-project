@@ -5,9 +5,10 @@ export default function Wrapper({ children }) {
 }
 
 const StyledWrapper = styled.div`
-  background-color: white;
+  background-color: var(--off-white);
   width: 375px;
   min-height: 100vh;
   margin: 0 auto;
   padding: 32px;
+  margin-top: 24px;
 `;
