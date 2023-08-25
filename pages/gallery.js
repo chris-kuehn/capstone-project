@@ -1,13 +1,13 @@
-import Canvas from "@/components/Canvas";
+import GalleryCanvas from "@/components/GalleryCanvas";
 import Navigation from "@/components/Navigation";
 import Wrapper from "@/components/Wrapper";
 
 export default function HomePage() {
   return (
     <>
-      <Navigation pageStatus="studio" />
+      <Navigation pageStatus="gallery" />
       <Wrapper>
-        <Canvas />
+        <GalleryCanvas />
       </Wrapper>
     </>
   );
