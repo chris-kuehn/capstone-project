@@ -65,7 +65,7 @@ export default function Canvas() {
     <>
       <StyledHeadline>Generator 1</StyledHeadline>
       <StyledCanvas width="300" height="300" ref={canvasRef} />
-      <StyledWrapperForm>
+      <StyledInputWrapper>
         <label htmlFor="colorSelector">Color </label>
         <StyledInputRange
           type="range"
@@ -109,7 +109,7 @@ export default function Canvas() {
         >
           Variation
         </StyledVariatonButton>
-      </StyledWrapperForm>
+      </StyledInputWrapper>
     </>
   );
 }
@@ -123,7 +123,7 @@ const StyledHeadline = styled.h1`
   margin-bottom: 1rem;
 `;
 
-const StyledWrapperForm = styled.form`
+const StyledInputWrapper = styled.div`
   display: flex;
   flex-direction: column;
 `;
