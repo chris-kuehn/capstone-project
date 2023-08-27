@@ -27,6 +27,7 @@ const StyledGlobalNavigation = styled.nav`
   position: fixed;
   top: 0;
   width: 375px;
+  background-color: var(--app-black);
 
   /* Code von ChatGTP */
   left: 50%;
@@ -51,7 +52,7 @@ const StyledListItem = styled.li`
 
 const StyledNavigationLink = styled(Link)`
   color: white;
-  background-color: black;
+  background-color: var(--app-black);
   text-decoration: none;
   display: block;
   padding: 0.75rem 0;
@@ -60,14 +61,21 @@ const StyledNavigationLink = styled(Link)`
   letter-spacing: 0.75px;
   &:hover {
     color: var(--primary-color);
+    text-decoration: underline;
+    text-underline-offset: 5px;
+    text-decoration-thickness: 3px;
   }
   ${({ $isActive }) =>
     $isActive &&
     css`
-      color: var(--app-black);
-      background-color: var(--primary-color);
+      color: var(--primary-color);
+      background-color: var(--app-black);
+      text-decoration: underline;
+      text-underline-offset: 5px;
+      text-decoration-thickness: 3px;
       &:hover {
-        color: var(--app-black);
+        color: var(--primary-color);
+        font-size: 1rem;
       }
     `};
 `;

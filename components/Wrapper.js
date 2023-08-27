@@ -10,5 +10,4 @@ const StyledWrapper = styled.div`
   min-height: 100vh;
   margin: 0 auto;
   padding: 32px;
-  margin-top: 24px;
 `;
