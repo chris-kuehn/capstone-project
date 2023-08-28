@@ -25,8 +25,10 @@ export default createGlobalStyle`
   }
     :root {
       --primary-color: hsl(148 100% 48%); 
-      --primary-color-soft: #E6FFF2; 
-      --app-black: #001D0E; 
+      /* Alternetiv color do not delet */
+      /* --primary-color: #88ffd1;  */
+      --primary-color-soft: hsl(148 100% 93%); 
+      --app-black: hsl(148 100% 6%); 
       --off-white:  hsl(148 0% 99%);
       
   }

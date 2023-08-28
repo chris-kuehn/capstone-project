@@ -3,10 +3,10 @@ import styled from "styled-components";
 export default function StudioHeader() {
   return (
     <StyledStudioHeader>
-      <h1>Creative Coding</h1>
+      <StyledStudioHeadline>Creative Coding</StyledStudioHeadline>
       <p>
-        Das ist ein kleiner Text der erklärt was Generative Art ist und was
-        welche Rolle der Zufall spielt.{" "}
+        Das ist ein kleiner Text der erklärt <br />
+        was Generative Art ist und was welche Rolle der Zufall spielt.{" "}
       </p>
     </StyledStudioHeader>
   );
@@ -21,5 +21,10 @@ const StyledStudioHeader = styled.header`
   padding: 32px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: end;
+`;
+
+const StyledStudioHeadline = styled.h1`
+  line-height: 2.25rem;
+  padding-bottom: 0.5rem;
 `;

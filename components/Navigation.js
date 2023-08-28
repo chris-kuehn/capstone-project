@@ -48,6 +48,10 @@ const StyledListItem = styled.li`
   Flex-shrink:1;
   flex-basis: 0%; */
   flex: 1;
+
+  &:first-child {
+    border-right: 3px solid var(--primary-color);
+  }
 `;
 
 const StyledNavigationLink = styled(Link)`
@@ -62,16 +66,17 @@ const StyledNavigationLink = styled(Link)`
   &:hover {
     color: var(--primary-color);
     text-decoration: underline;
-    text-underline-offset: 5px;
+    text-underline-offset: 4px;
     text-decoration-thickness: 3px;
   }
+
   ${({ $isActive }) =>
     $isActive &&
     css`
       color: var(--primary-color);
-      background-color: var(--app-black);
+      /* background-color: var(--app-black); */
       text-decoration: underline;
-      text-underline-offset: 5px;
+      text-underline-offset: 4px;
       text-decoration-thickness: 3px;
       &:hover {
         color: var(--primary-color);
