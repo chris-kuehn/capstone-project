@@ -5,8 +5,8 @@ export default function StudioHeader() {
     <StyledStudioHeader>
       <StyledStudioHeadline>Creative Coding</StyledStudioHeadline>
       <p>
-        Das ist ein kleiner Text der erklärt <br />
-        was Generative Art ist und was welche Rolle der Zufall spielt.{" "}
+        Use the generator and experience how a geometric work of art is created
+        from code and how randomness creates uniqueness.
       </p>
     </StyledStudioHeader>
   );
