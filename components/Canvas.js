@@ -29,6 +29,28 @@ export default function Canvas() {
     lineWidthRandomizer(),
   ]);
 
+  function handleColorChange(change) {
+    setColor(change);
+  }
+  function handleRotationChange(change) {
+    setRotation(change);
+  }
+  function handleOutlineChange(change) {
+    setOutline(change);
+  }
+  function handleVariation() {
+    setVariation([
+      lineWidthRandomizer(),
+      lineWidthRandomizer(),
+      lineWidthRandomizer(),
+      lineWidthRandomizer(),
+      lineWidthRandomizer(),
+      lineWidthRandomizer(),
+      lineWidthRandomizer(),
+      lineWidthRandomizer(),
+    ]);
+  }
+
   useEffect(() => {
     const canvas = canvasRef.current;
     const context = canvas.getContext("2d");
@@ -71,7 +93,7 @@ export default function Canvas() {
           min="0"
           max="360"
           value={color}
-          onChange={(event) => setColor(event.target.value)}
+          onChange={(event) => handleColorChange(event.target.value)}
           id="colorSelector"
         />
         <label htmlFor="rotation">Rotation </label>
@@ -80,7 +102,7 @@ export default function Canvas() {
           min="0"
           max="90"
           value={rotation}
-          onChange={(event) => setRotation(event.target.value)}
+          onChange={(event) => handleRotationChange(event.target.value)}
           id="rotation"
         />
         <label htmlFor="outline">Amount of outlines </label>
@@ -89,23 +111,10 @@ export default function Canvas() {
           min="0"
           max="8"
           value={outline}
-          onChange={(event) => setOutline(event.target.value)}
+          onChange={(event) => handleOutlineChange(event.target.value)}
           id="outline"
         />
-        <StyledVariatonButton
-          onClick={() =>
-            setVariation([
-              lineWidthRandomizer(),
-              lineWidthRandomizer(),
-              lineWidthRandomizer(),
-              lineWidthRandomizer(),
-              lineWidthRandomizer(),
-              lineWidthRandomizer(),
-              lineWidthRandomizer(),
-              lineWidthRandomizer(),
-            ])
-          }
-        >
+        <StyledVariatonButton onClick={() => handleVariation()}>
           Variation
         </StyledVariatonButton>
       </StyledInputWrapper>
