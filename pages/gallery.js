@@ -10,12 +10,10 @@ export default function HomePage() {
     <>
       <Navigation pageStatus="gallery" />
       <GalleryHeader />
-      <Wrapper>
-        <Section>
-          <SectionHeadline headline="Artwork-ID: 1" />
-          <GalleryCanvas />
-        </Section>
-      </Wrapper>
+      <Section>
+        <SectionHeadline> Artwork ID-1</SectionHeadline>
+        <GalleryCanvas />
+      </Section>
     </>
   );
 }

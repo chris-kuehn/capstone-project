@@ -5,6 +5,9 @@ export default function Wrapper({ children }) {
 }
 
 const StudioGeneratorSection = styled.div`
-  margin: 0;
-  padding: 0;
+  background-color: var(--off-white);
+  width: 375px;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 32px;
 `;

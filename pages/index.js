@@ -10,12 +10,10 @@ export default function HomePage() {
     <>
       <Navigation pageStatus="studio" />
       <StudioHeader />
-      <Wrapper>
-        <Section>
-          <SectionHeadline headline="Generator 1" />
-        </Section>
+      <Section>
+        <SectionHeadline> Generator 1</SectionHeadline>
         <Canvas />
-      </Wrapper>
+      </Section>
     </>
   );
 }
