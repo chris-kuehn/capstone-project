@@ -1,10 +1,10 @@
 import styled from "styled-components";
 
 export default function Wrapper({ children }) {
-  return <StyledWrapper>{children}</StyledWrapper>;
+  return <StudioGeneratorSection>{children}</StudioGeneratorSection>;
 }
 
-const StyledWrapper = styled.div`
+const StudioGeneratorSection = styled.div`
   background-color: var(--off-white);
   width: 375px;
   min-height: 100vh;

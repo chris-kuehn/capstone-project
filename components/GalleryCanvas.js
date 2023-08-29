@@ -34,7 +34,7 @@ export default function GalleryCanvas() {
     const context = canvas.getContext("2d");
 
     // Beginn drawing statements
-    context.fillStyle = `hsl(${color}, 60%, 95%)`;
+    context.fillStyle = `hsl(${color}, 100%, 93%)`;
     context.fillRect(0, 0, canvas.width, canvas.height);
 
     context.fillStyle = `hsl(${color}, 100%, 48%)`;
@@ -63,7 +63,6 @@ export default function GalleryCanvas() {
   }, [color, rotation, variation, outline]);
   return (
     <>
-      <StyledHeadline>Your artwork collection</StyledHeadline>
       <StyledCanvas width="300" height="300" ref={canvasRef} />
     </>
   );
@@ -71,9 +70,5 @@ export default function GalleryCanvas() {
 
 const StyledCanvas = styled.canvas`
   border: 1px solid black;
-  margin-bottom: 1rem;
-`;
-
-const StyledHeadline = styled.h1`
   margin-bottom: 1rem;
 `;

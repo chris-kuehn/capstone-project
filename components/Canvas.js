@@ -63,7 +63,6 @@ export default function Canvas() {
   }, [color, rotation, variation, outline]);
   return (
     <>
-      <StyledHeadline>Generator 1</StyledHeadline>
       <StyledCanvas width="300" height="300" ref={canvasRef} />
       <StyledInputWrapper>
         <label htmlFor="colorSelector">Color </label>
@@ -116,10 +115,6 @@ export default function Canvas() {
 
 const StyledCanvas = styled.canvas`
   border: 1px solid black;
-  margin-bottom: 1rem;
-`;
-
-const StyledHeadline = styled.h1`
   margin-bottom: 1rem;
 `;
 
