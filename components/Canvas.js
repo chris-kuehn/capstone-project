@@ -1,55 +1,64 @@
 import { useRef, useEffect, useState } from "react";
 import styled from "styled-components";
 
-function lineWidthRandomizer() {
-  const randomNumber = Math.random();
-  if (randomNumber <= 0.7) {
-    return 2;
-  } else if (randomNumber <= 0.9) {
-    return 8;
-  } else {
-    return 4;
-  }
-}
+// function lineWidthRandomizer() {
+//   const randomNumber = Math.random();
+//   if (randomNumber <= 0.7) {
+//     return 2;
+//   } else if (randomNumber <= 0.9) {
+//     return 8;
+//   } else {
+//     return 4;
+//   }
+// }
 
-export default function Canvas() {
+export default function Canvas({
+  color,
+  rotation,
+  outline,
+  variation,
+  handleColorChange,
+  handleRotationChange,
+  handleOutlineChange,
+  handleVariation,
+}) {
   const canvasRef = useRef(null);
 
-  const [color, setColor] = useState(148);
-  const [rotation, setRotation] = useState(45);
-  const [outline, setOutline] = useState(0);
-  const [variation, setVariation] = useState([
-    lineWidthRandomizer(),
-    lineWidthRandomizer(),
-    lineWidthRandomizer(),
-    lineWidthRandomizer(),
-    lineWidthRandomizer(),
-    lineWidthRandomizer(),
-    lineWidthRandomizer(),
-    lineWidthRandomizer(),
-  ]);
+  // const [color, setColor] = useState(148);
+  // const [rotation, setRotation] = useState(45);
+  // const [outline, setOutline] = useState(0);
+  // const [variation, setVariation] = useState([
+  //   lineWidthRandomizer(),
+  //   lineWidthRandomizer(),
+  //   lineWidthRandomizer(),
+  //   lineWidthRandomizer(),
+  //   lineWidthRandomizer(),
+  //   lineWidthRandomizer(),
+  //   lineWidthRandomizer(),
+  //   lineWidthRandomizer(),
+  // ]);
 
-  function handleColorChange(change) {
-    setColor(change);
-  }
-  function handleRotationChange(change) {
-    setRotation(change);
-  }
-  function handleOutlineChange(change) {
-    setOutline(change);
-  }
-  function handleVariation() {
-    setVariation([
-      lineWidthRandomizer(),
-      lineWidthRandomizer(),
-      lineWidthRandomizer(),
-      lineWidthRandomizer(),
-      lineWidthRandomizer(),
-      lineWidthRandomizer(),
-      lineWidthRandomizer(),
-      lineWidthRandomizer(),
-    ]);
-  }
+  // function handleColorChange(change) {
+  //   setColor(change);
+  // }
+  // function handleRotationChange(change) {
+  //   setRotation(change);
+  // }
+  // function handleOutlineChange(change) {
+  //   setOutline(change);
+  // }
+  // function handleVariation() {
+  //   setVariation([
+  //     lineWidthRandomizer(),
+  //     lineWidthRandomizer(),
+  //     lineWidthRandomizer(),
+  //     lineWidthRandomizer(),
+  //     lineWidthRandomizer(),
+  //     lineWidthRandomizer(),
+  //     lineWidthRandomizer(),
+  //     lineWidthRandomizer(),
+  //   ]);
+  // }
 
   useEffect(() => {
     const canvas = canvasRef.current;
