@@ -3,12 +3,10 @@ import styled from "styled-components";
 
 export default function InputsOne({
   canvasOneParameter,
-  variation,
-  handleColorChangeNeu,
-  handleRotationChangeNeu,
-  handleOutlineChangeNeu,
-  handleVariationNeu,
-  canvasRef,
+  handleColorChange,
+  handleRotationChange,
+  handleOutlineChange,
+  handleVariation,
 }) {
   return (
     <StyledInputWrapper>
@@ -18,7 +16,7 @@ export default function InputsOne({
         min="0"
         max="360"
         value={canvasOneParameter[0].color}
-        onChange={(event) => handleColorChangeNeu(event.target.value)}
+        onChange={(event) => handleColorChange(event.target.value)}
         id="colorSelector"
       />
       <label htmlFor="rotation">Rotation </label>
@@ -27,7 +25,7 @@ export default function InputsOne({
         min="0"
         max="90"
         value={canvasOneParameter[1].rotation}
-        onChange={(event) => handleRotationChangeNeu(event.target.value)}
+        onChange={(event) => handleRotationChange(event.target.value)}
         id="rotation"
       />
       <label htmlFor="outline">Amount of outlines </label>
@@ -36,10 +34,10 @@ export default function InputsOne({
         min="0"
         max="8"
         value={canvasOneParameter[2].outline}
-        onChange={(event) => handleOutlineChangeNeu(event.target.value)}
+        onChange={(event) => handleOutlineChange(event.target.value)}
         id="outline"
       />
-      <StyledVariatonButton onClick={() => handleVariationNeu()}>
+      <StyledVariatonButton onClick={() => handleVariation()}>
         Variation
       </StyledVariatonButton>
     </StyledInputWrapper>

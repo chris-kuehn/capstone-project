@@ -3,10 +3,10 @@ import styled from "styled-components";
 
 export default function CanvasOne({
   canvasOneParameter,
-  handleColorChangeNeu,
-  handleRotationChangeNeu,
-  handleOutlineChange,
-  handleVariationNeu,
+  // handleColorChange,
+  // handleRotationChange,
+  // handleOutlineChange,
+  // handleVariation,
   canvasRef,
 }) {
   useEffect(() => {

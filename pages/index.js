@@ -36,14 +36,14 @@ export default function HomePage() {
     },
   ]);
 
-  function handleColorChangeNeu(change) {
+  function handleColorChange(change) {
     setCanvasOneParameter((canvasOneParameter) => [
       { ...canvasOneParameter[0], color: change },
       ...canvasOneParameter.slice(1),
     ]);
   }
 
-  function handleRotationChangeNeu(change) {
+  function handleRotationChange(change) {
     setCanvasOneParameter((canvasOneParameter) => [
       ...canvasOneParameter.slice(0, 1),
       { ...canvasOneParameter[1], rotation: change },
@@ -51,7 +51,7 @@ export default function HomePage() {
     ]);
   }
 
-  function handleOutlineChangeNeu(change) {
+  function handleOutlineChange(change) {
     setCanvasOneParameter((canvasOneParameter) => [
       ...canvasOneParameter.slice(0, 2),
       { ...canvasOneParameter[2], outline: change },
@@ -59,7 +59,7 @@ export default function HomePage() {
     ]);
   }
 
-  function handleVariationNeu(change) {
+  function handleVariation(change) {
     setCanvasOneParameter((canvasOneParameter) => [
       ...canvasOneParameter.slice(0, 3),
       { ...canvasOneParameter[3], lineWidthes: lineWidthsDisributor() },
@@ -77,18 +77,18 @@ export default function HomePage() {
         <SectionHeadline> Generator 1</SectionHeadline>
         <CanvasOne
           canvasOneParameter={canvasOneParameter}
-          handleColorChangeNeu={handleColorChangeNeu}
-          handleRotationChangeNeu={handleRotationChangeNeu}
-          handleOutlineChangeNeu={handleOutlineChangeNeu}
-          handleVariationNeu={handleVariationNeu}
+          handleColorChange={handleColorChange}
+          handleRotationChange={handleRotationChange}
+          handleOutlineChange={handleOutlineChange}
+          handleVariation={handleVariation}
           canvasRef={canvasRef}
         />
         <InputsOne
           canvasOneParameter={canvasOneParameter}
-          handleColorChangeNeu={handleColorChangeNeu}
-          handleRotationChangeNeu={handleRotationChangeNeu}
-          handleOutlineChangeNeu={handleOutlineChangeNeu}
-          handleVariationNeu={handleVariationNeu}
+          handleColorChange={handleColorChange}
+          handleRotationChange={handleRotationChange}
+          handleOutlineChange={handleOutlineChange}
+          handleVariation={handleVariation}
           canvasRef={canvasRef}
         />
       </Section>
