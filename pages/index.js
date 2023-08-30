@@ -1,9 +1,10 @@
-import React, { useState } from "react";
-import Canvas from "@/components/Canvas";
+import React, { useState, useRef } from "react";
+import CanvasOne from "@/components/CanvasOne";
 import Navigation from "@/components/Navigation";
 import StudioHeader from "@/components/StudioHeader";
 import Section from "@/components/Section";
 import SectionHeadline from "@/components/SectionHeadline";
+import InputsOne from "@/components/InputsOne";
 import lineWidthRandomizer from "@/utilities/LineWidthRandomizer";
 
 export default function HomePage() {
@@ -43,13 +44,16 @@ export default function HomePage() {
       lineWidthRandomizer(),
     ]);
   }
+
+  const canvasRef = useRef(null);
+
   return (
     <>
       <Navigation pageStatus="studio" />
       <StudioHeader />
       <Section>
         <SectionHeadline> Generator 1</SectionHeadline>
-        <Canvas
+        <CanvasOne
           color={color}
           rotation={rotation}
           outline={outline}
@@ -58,6 +62,18 @@ export default function HomePage() {
           handleRotationChange={handleRotationChange}
           handleOutlineChange={handleOutlineChange}
           handleVariation={handleVariation}
+          canvasRef={canvasRef}
+        />
+        <InputsOne
+          color={color}
+          rotation={rotation}
+          outline={outline}
+          variation={variation}
+          handleColorChange={handleColorChange}
+          handleRotationChange={handleRotationChange}
+          handleOutlineChange={handleOutlineChange}
+          handleVariation={handleVariation}
+          canvasRef={canvasRef}
         />
       </Section>
     </>
