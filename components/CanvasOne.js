@@ -3,14 +3,10 @@ import styled from "styled-components";
 
 export default function CanvasOne({
   canvasOneParameter,
-  // color,
-  // rotation,
-  // outline,
-  variation,
   handleColorChangeNeu,
   handleRotationChangeNeu,
   handleOutlineChange,
-  handleVariation,
+  handleVariationNeu,
   canvasRef,
 }) {
   useEffect(() => {
@@ -26,7 +22,7 @@ export default function CanvasOne({
     context.rotate((canvasOneParameter[1].rotation * Math.PI) / 180);
     context.fillRect(-40, -40, 80, 80);
 
-    context.lineWidth = canvasOneParameter[3][0];
+    context.lineWidth = canvasOneParameter[3].lineWidthes[0];
     context.strokeStyle = `hsl(${canvasOneParameter[0].color}, 60%, 95%)`;
     context.strokeRect(-22.5, -22.5, 45, 45);
 
@@ -44,7 +40,7 @@ export default function CanvasOne({
     // Reset the transformation matrix to the identity matrix
     context.setTransform(1, 0, 0, 1, 0, 0);
     // End drawing statements
-  }, [canvasOneParameter, variation]);
+  }, [canvasOneParameter]);
   return (
     <>
       <StyledCanvas width="300" height="300" ref={canvasRef} />

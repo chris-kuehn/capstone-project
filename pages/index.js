@@ -36,34 +36,12 @@ export default function HomePage() {
     },
   ]);
 
-  // const [color, setColor] = useState(148);
-  // const [rotation, setRotation] = useState(45);
-  // const [outline, setOutline] = useState(0);
-  // const [variation, setVariation] = useState([
-  //   lineWidthRandomizer(),
-  //   lineWidthRandomizer(),
-  //   lineWidthRandomizer(),
-  //   lineWidthRandomizer(),
-  //   lineWidthRandomizer(),
-  //   lineWidthRandomizer(),
-  //   lineWidthRandomizer(),
-  //   lineWidthRandomizer(),
-  // ]);
-
-  // function handleColorChange(change) {
-  //   setCanvasOneParameter(change);
-  // }
-
   function handleColorChangeNeu(change) {
     setCanvasOneParameter((canvasOneParameter) => [
       { ...canvasOneParameter[0], color: change },
       ...canvasOneParameter.slice(1),
     ]);
   }
-
-  // function handleRotationChange(change) {
-  //   setRotation(change);
-  // }
 
   function handleRotationChangeNeu(change) {
     setCanvasOneParameter((canvasOneParameter) => [
@@ -73,10 +51,6 @@ export default function HomePage() {
     ]);
   }
 
-  // function handleOutlineChange(change) {
-  //   setOutline(change);
-  // }
-
   function handleOutlineChangeNeu(change) {
     setCanvasOneParameter((canvasOneParameter) => [
       ...canvasOneParameter.slice(0, 2),
@@ -84,19 +58,6 @@ export default function HomePage() {
       ...canvasOneParameter.slice(3),
     ]);
   }
-
-  // function handleVariation() {
-  //   setVariation([
-  //     lineWidthRandomizer(),
-  //     lineWidthRandomizer(),
-  //     lineWidthRandomizer(),
-  //     lineWidthRandomizer(),
-  //     lineWidthRandomizer(),
-  //     lineWidthRandomizer(),
-  //     lineWidthRandomizer(),
-  //     lineWidthRandomizer(),
-  //   ]);
-  // }
 
   function handleVariationNeu(change) {
     setCanvasOneParameter((canvasOneParameter) => [
@@ -116,28 +77,16 @@ export default function HomePage() {
         <SectionHeadline> Generator 1</SectionHeadline>
         <CanvasOne
           canvasOneParameter={canvasOneParameter}
-          // color={color}
-          // rotation={rotation}
-          // outline={outline}
-          // variation={variation}
           handleColorChangeNeu={handleColorChangeNeu}
-          // handleColorChange={handleColorChange}
           handleRotationChangeNeu={handleRotationChangeNeu}
-          // handleRotationChange={handleRotationChange}
           handleOutlineChangeNeu={handleOutlineChangeNeu}
           handleVariationNeu={handleVariationNeu}
           canvasRef={canvasRef}
         />
         <InputsOne
           canvasOneParameter={canvasOneParameter}
-          // color={color}
-          // rotation={rotation}
-          // outline={outline}
-          // variation={variation}
           handleColorChangeNeu={handleColorChangeNeu}
-          // handleColorChange={handleColorChange}
           handleRotationChangeNeu={handleRotationChangeNeu}
-          // handleRotationChange={handleRotationChange}
           handleOutlineChangeNeu={handleOutlineChangeNeu}
           handleVariationNeu={handleVariationNeu}
           canvasRef={canvasRef}
