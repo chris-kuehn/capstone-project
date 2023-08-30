@@ -2,14 +2,12 @@ import { useRef, useEffect, useState } from "react";
 import styled from "styled-components";
 
 export default function InputsOne({
-  color,
-  rotation,
-  outline,
+  canvasOneParameter,
   variation,
-  handleColorChange,
-  handleRotationChange,
-  handleOutlineChange,
-  handleVariation,
+  handleColorChangeNeu,
+  handleRotationChangeNeu,
+  handleOutlineChangeNeu,
+  handleVariationNeu,
   canvasRef,
 }) {
   return (
@@ -19,8 +17,8 @@ export default function InputsOne({
         type="range"
         min="0"
         max="360"
-        value={color}
-        onChange={(event) => handleColorChange(event.target.value)}
+        value={canvasOneParameter[0].color}
+        onChange={(event) => handleColorChangeNeu(event.target.value)}
         id="colorSelector"
       />
       <label htmlFor="rotation">Rotation </label>
@@ -28,8 +26,8 @@ export default function InputsOne({
         type="range"
         min="0"
         max="90"
-        value={rotation}
-        onChange={(event) => handleRotationChange(event.target.value)}
+        value={canvasOneParameter[1].rotation}
+        onChange={(event) => handleRotationChangeNeu(event.target.value)}
         id="rotation"
       />
       <label htmlFor="outline">Amount of outlines </label>
@@ -37,11 +35,11 @@ export default function InputsOne({
         type="range"
         min="0"
         max="8"
-        value={outline}
-        onChange={(event) => handleOutlineChange(event.target.value)}
+        value={canvasOneParameter[2].outline}
+        onChange={(event) => handleOutlineChangeNeu(event.target.value)}
         id="outline"
       />
-      <StyledVariatonButton onClick={() => handleVariation()}>
+      <StyledVariatonButton onClick={() => handleVariationNeu()}>
         Variation
       </StyledVariatonButton>
     </StyledInputWrapper>
