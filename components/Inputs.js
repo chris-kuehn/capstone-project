@@ -2,7 +2,7 @@ import { useRef, useEffect, useState } from "react";
 import styled from "styled-components";
 
 export default function InputsOne({
-  canvasOneParameter,
+  canvasParameter,
   handleColorChange,
   handleRotationChange,
   handleOutlineChange,
@@ -15,7 +15,7 @@ export default function InputsOne({
         type="range"
         min="0"
         max="360"
-        value={canvasOneParameter[0].color}
+        value={canvasParameter[0].color}
         onChange={(event) => handleColorChange(event.target.value)}
         id="colorSelector"
       />
@@ -24,7 +24,7 @@ export default function InputsOne({
         type="range"
         min="0"
         max="90"
-        value={canvasOneParameter[1].rotation}
+        value={canvasParameter[1].rotation}
         onChange={(event) => handleRotationChange(event.target.value)}
         id="rotation"
       />
@@ -33,11 +33,11 @@ export default function InputsOne({
         type="range"
         min="0"
         max="8"
-        value={canvasOneParameter[2].outline}
+        value={canvasParameter[2].outline}
         onChange={(event) => handleOutlineChange(event.target.value)}
         id="outline"
       />
-      <StyledVariatonButton onClick={() => handleVariation()}>
+      <StyledVariatonButton type="button" onClick={() => handleVariation()}>
         Variation
       </StyledVariatonButton>
     </StyledInputWrapper>
