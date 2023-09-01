@@ -1,5 +1,5 @@
 import { useRef, useState } from "react";
-import GalleryCanvas from "@/components/GalleryCanvas";
+import styled, { css } from "styled-components";
 import Navigation from "@/components/Navigation";
 import Section from "@/components/Section";
 import SectionHeadline from "@/components/SectionHeadline";
@@ -13,15 +13,23 @@ export default function HomePage({ listOfArtworks }) {
       <GalleryHeader />
       <Section>
         <SectionHeadline> Artwork ID-1</SectionHeadline>
-        {listOfArtworks.map((artwork) => (
-          <Canvas
-            key={artwork.key}
-            canvasParameter={artwork}
-            width="300"
-            height="300"
-          />
-        ))}
+        <StyledUl>
+          {listOfArtworks.map((artwork) => (
+            <StyledListItem key={artwork[5].id}>
+              <Canvas canvasParameter={artwork} width="300" height="300" />
+            </StyledListItem>
+          ))}
+        </StyledUl>
       </Section>
     </>
   );
 }
+
+const StyledListItem = styled.li`
+  list-style: none;
+  padding: 0;
+`;
+
+const StyledUl = styled.ul`
+  padding: 0;
+`;
