@@ -1,7 +1,9 @@
 import { useRef, useEffect, useState } from "react";
 import styled from "styled-components";
 
-export default function Canvas({ canvasParameter, canvasRef }) {
+export default function Canvas({ canvasParameter }) {
+  const canvasRef = useRef(null);
+
   useEffect(() => {
     const canvas = canvasRef.current;
     const context = canvas.getContext("2d");
@@ -33,7 +35,7 @@ export default function Canvas({ canvasParameter, canvasRef }) {
     // Reset the transformation matrix to the identity matrix
     context.setTransform(1, 0, 0, 1, 0, 0);
     // End drawing statements
-  }, [canvasParameter]);
+  }, [canvasParameter, canvasRef]);
   return <StyledCanvas width="300" height="300" ref={canvasRef} />;
 }
 
