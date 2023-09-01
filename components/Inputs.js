@@ -7,6 +7,8 @@ export default function InputsOne({
   handleRotationChange,
   handleOutlineChange,
   handleVariation,
+  listOfArtworks,
+  handleListOfArtworks,
 }) {
   return (
     <StyledInputWrapper>
@@ -40,6 +42,12 @@ export default function InputsOne({
       <StyledVariatonButton type="button" onClick={() => handleVariation()}>
         Variation
       </StyledVariatonButton>
+      <StyledVariatonButton
+        type="button"
+        onClick={() => handleListOfArtworks(canvasParameter)}
+      >
+        Save
+      </StyledVariatonButton>
     </StyledInputWrapper>
   );
 }
@@ -56,6 +64,7 @@ const StyledVariatonButton = styled.button`
   font-weight: 300;
   font-size: 1rem;
   width: 30%;
+  margin-top: 0.5rem;
 `;
 
 const StyledInputRange = styled.input`

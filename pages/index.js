@@ -17,7 +17,7 @@ let lineWidth6 = lineWidthRandomizer();
 let lineWidth7 = lineWidthRandomizer();
 let lineWidth8 = lineWidthRandomizer();
 
-export default function HomePage() {
+export default function HomePage({ listOfArtworks, handleListOfArtworks }) {
   const [canvasParameter, setCanvasParameter] = useState([
     { color: 148 },
     { rotation: 45 },
@@ -34,6 +34,7 @@ export default function HomePage() {
         lineWidth8,
       ],
     },
+    { id: listOfArtworks.length + 1 },
   ]);
 
   function handleColorChange(change) {
@@ -90,6 +91,8 @@ export default function HomePage() {
           handleOutlineChange={handleOutlineChange}
           handleVariation={handleVariation}
           canvasRef={canvasRef}
+          listOfArtworks={listOfArtworks}
+          handleListOfArtworks={handleListOfArtworks}
         />
       </Section>
     </>
