@@ -16,7 +16,7 @@ export default function App({ Component, pageProps }) {
       {
         lineWidthes: [8, 2, 2, 2, 2, 2, 2, 2],
       },
-      { key: 1 },
+      { id: 1 },
     ],
     [
       { color: 100 },
@@ -25,7 +25,7 @@ export default function App({ Component, pageProps }) {
       {
         lineWidthes: [2, 2, 8, 2, 2, 2, 2, 2],
       },
-      { key: 2 },
+      { id: 2 },
     ],
     [
       { color: 300 },
@@ -34,7 +34,7 @@ export default function App({ Component, pageProps }) {
       {
         lineWidthes: [8, 2, 8, 2, 2, 2, 2, 2],
       },
-      { key: 3 },
+      { id: 3 },
     ],
   ]);
 
