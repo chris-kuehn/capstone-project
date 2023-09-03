@@ -1,6 +1,7 @@
 import GlobalStyle from "../styles";
 import { Roboto } from "@next/font/google";
 import { useState } from "react";
+import useLocalStorageState from "use-local-storage-state";
 
 const roboto = Roboto({
   subsets: ["latin"],
@@ -8,7 +9,10 @@ const roboto = Roboto({
 });
 
 export default function App({ Component, pageProps }) {
-  const [listOfArtworks, setListOfArtworks] = useState([]);
+  const [listOfArtworks, setListOfArtworks] = useLocalStorageState(
+    "listOfArtworks",
+    { defaultValue: [] }
+  );
 
   function handleListOfArtworks(currentArray) {
     setListOfArtworks((prevList) => {
