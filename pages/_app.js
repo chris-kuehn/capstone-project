@@ -8,40 +8,22 @@ const roboto = Roboto({
 });
 
 export default function App({ Component, pageProps }) {
-  const [listOfArtworks, setListofArtworks] = useState([
-    [
-      { color: 148 },
-      { rotation: 45 },
-      { outline: 0 },
-      {
-        lineWidthes: [8, 2, 2, 2, 2, 2, 2, 2],
-      },
-      { id: 1 },
-    ],
-    [
-      { color: 100 },
-      { rotation: 90 },
-      { outline: 4 },
-      {
-        lineWidthes: [2, 2, 8, 2, 2, 2, 2, 2],
-      },
-      { id: 2 },
-    ],
-    [
-      { color: 300 },
-      { rotation: 60 },
-      { outline: 6 },
-      {
-        lineWidthes: [8, 2, 8, 2, 2, 2, 2, 2],
-      },
-      { id: 3 },
-    ],
-  ]);
+  const [listOfArtworks, setListOfArtworks] = useState([]);
+
+  function handleListOfArtworks(currentArray) {
+    setListOfArtworks((prevList) => {
+      return [...prevList, ...[currentArray]];
+    });
+  }
 
   return (
     <>
       <GlobalStyle />
-      <Component {...pageProps} listOfArtworks={listOfArtworks} />
+      <Component
+        {...pageProps}
+        listOfArtworks={listOfArtworks}
+        handleListOfArtworks={handleListOfArtworks}
+      />
     </>
   );
 }
