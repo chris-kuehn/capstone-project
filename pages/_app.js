@@ -14,6 +14,10 @@ export default function App({ Component, pageProps }) {
     { defaultValue: [] }
   );
 
+  const [artworkId, setArtworkId] = useLocalStorageState("artworkId", {
+    defaultValue: 1,
+  });
+
   function handleListOfArtworks(currentArray) {
     setListOfArtworks((prevList) => {
       return [...prevList, ...[currentArray]];
@@ -27,6 +31,8 @@ export default function App({ Component, pageProps }) {
         {...pageProps}
         listOfArtworks={listOfArtworks}
         handleListOfArtworks={handleListOfArtworks}
+        artworkId={artworkId}
+        setArtworkId={setArtworkId}
       />
     </>
   );

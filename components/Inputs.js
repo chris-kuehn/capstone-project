@@ -8,7 +8,22 @@ export default function InputsOne({
   handleOutlineChange,
   handleVariation,
   handleListOfArtworks,
+  artworkId,
+  setArtworkId,
+  setCanvasParameter,
 }) {
+  // function handleAddArtwork() {
+  //   setArtworkId(artworkId + 1);
+  // }
+  function handleAddArtwork() {
+    const updatedArtworkId = artworkId + 1;
+    setArtworkId(updatedArtworkId);
+    setCanvasParameter((canvasParameter) => ({
+      ...canvasParameter,
+      id: updatedArtworkId,
+    }));
+  }
+
   return (
     <StyledInputWrapper>
       <label htmlFor="colorSelector">Color </label>
@@ -43,7 +58,10 @@ export default function InputsOne({
       </StyledInputButton>
       <StyledInputButton
         type="button"
-        onClick={() => handleListOfArtworks(canvasParameter)}
+        onClick={() => {
+          handleListOfArtworks(canvasParameter);
+          handleAddArtwork();
+        }}
       >
         Save
       </StyledInputButton>
