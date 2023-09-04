@@ -16,7 +16,7 @@ export default function InputsOne({
         type="range"
         min="0"
         max="360"
-        value={canvasParameter[0].color}
+        value={canvasParameter.color}
         onChange={(event) => handleColorChange(event.target.value)}
         id="colorSelector"
       />
@@ -25,7 +25,7 @@ export default function InputsOne({
         type="range"
         min="0"
         max="90"
-        value={canvasParameter[1].rotation}
+        value={canvasParameter.rotation}
         onChange={(event) => handleRotationChange(event.target.value)}
         id="rotation"
       />
@@ -34,7 +34,7 @@ export default function InputsOne({
         type="range"
         min="0"
         max="8"
-        value={canvasParameter[2].outline}
+        value={canvasParameter.outline}
         onChange={(event) => handleOutlineChange(event.target.value)}
         id="outline"
       />
