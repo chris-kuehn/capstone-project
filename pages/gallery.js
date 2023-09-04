@@ -15,7 +15,7 @@ export default function HomePage({ listOfArtworks }) {
         <SectionHeadline> Artwork ID-1</SectionHeadline>
         <StyledUl>
           {listOfArtworks.map((artwork) => (
-            <StyledListItem key={artwork[4].id}>
+            <StyledListItem key={artwork.id}>
               <Canvas canvasParameter={artwork} width="300" height="300" />
             </StyledListItem>
           ))}
