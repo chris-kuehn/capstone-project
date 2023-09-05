@@ -12,9 +12,6 @@ export default function InputsOne({
   setArtworkId,
   setCanvasParameter,
 }) {
-  // function handleAddArtwork() {
-  //   setArtworkId(artworkId + 1);
-  // }
   function handleAddArtwork() {
     const updatedArtworkId = artworkId + 1;
     setArtworkId(updatedArtworkId);

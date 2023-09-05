@@ -19,7 +19,7 @@ export default function HomePage({ listOfArtworks, setListOfArtworks }) {
       <Navigation pageStatus="gallery" />
       <GalleryHeader />
       <Section>
-        <StyledUl>
+        <StyledList>
           {listOfArtworks.map((artwork) => (
             <StyledListItem key={artwork.id}>
               <SectionHeadline> Artwork ID-{artwork.id}</SectionHeadline>
@@ -32,7 +32,7 @@ export default function HomePage({ listOfArtworks, setListOfArtworks }) {
               </StyledDeletButton>
             </StyledListItem>
           ))}
-        </StyledUl>
+        </StyledList>
       </Section>
     </>
   );
@@ -44,7 +44,7 @@ const StyledListItem = styled.li`
   margin-bottom: 3rem;
 `;
 
-const StyledUl = styled.ul`
+const StyledList = styled.ul`
   padding: 0;
 `;
 

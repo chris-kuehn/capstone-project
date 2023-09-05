@@ -65,9 +65,9 @@ button {
   
 }
 button {
-transition: background-color 250ms ease-in-out;}
+  transition: background-color 250ms ease-in-out;}
 a {
   transition-property: color, text-decoration;
-transition-duration: 500ms;
-transition-timing-function: ease-in-out;}
+  transition-duration: 500ms;
+  transition-timing-function: ease-in-out;}
 `;
