@@ -82,6 +82,12 @@ const StyledInputButton = styled.button`
   font-size: 1rem;
   width: 30%;
   margin-top: 0.5rem;
+  &:hover {
+    background-color: var(--primary-color-soft);
+  }
+  &:active {
+    background-color: var(--primary-color);
+  }
 `;
 
 const StyledInputRange = styled.input`

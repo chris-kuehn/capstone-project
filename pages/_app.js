@@ -33,6 +33,7 @@ export default function App({ Component, pageProps }) {
         handleListOfArtworks={handleListOfArtworks}
         artworkId={artworkId}
         setArtworkId={setArtworkId}
+        setListOfArtworks={setListOfArtworks}
       />
     </>
   );

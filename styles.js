@@ -45,6 +45,16 @@ h1, h2, h3, h4, h5, a {
   font-weight: 700;
 }
 
+h1 {
+  font-size: 2.5rem;
+  line-height: 2.5rem;
+  padding-bottom: 1rem;
+}
+
+h2 {
+  font-size:1.25rem;
+}
+
 label {
   font-family: ${robotoCondensed.style.fontFamily};
   font-weight: 400;
@@ -54,4 +64,10 @@ button {
   font-family: ${robotoCondensed.style.fontFamily};
   
 }
+button {
+transition: background-color 250ms ease-in-out;}
+a {
+  transition-property: color, text-decoration;
+transition-duration: 500ms;
+transition-timing-function: ease-in-out;}
 `;

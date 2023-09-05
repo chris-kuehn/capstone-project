@@ -3,12 +3,12 @@ import styled from "styled-components";
 export default function GalleryHeader() {
   return (
     <StyledGalleryHeader>
-      <StyledGalleryHeadline>
+      <h1>
         Collection of
         <br />
         your favorite <br />
         artworks
-      </StyledGalleryHeadline>
+      </h1>
       <p>
         View, adjust and download <br />
         your favorite artworks.
@@ -27,9 +27,4 @@ const StyledGalleryHeader = styled.header`
   display: flex;
   flex-direction: column;
   justify-content: center;
-`;
-
-const StyledGalleryHeadline = styled.h1`
-  line-height: 2.25rem;
-  padding-bottom: 0.5rem;
 `;
