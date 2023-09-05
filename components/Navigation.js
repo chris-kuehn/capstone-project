@@ -65,6 +65,10 @@ const StyledNavigationLink = styled(Link)`
   letter-spacing: 0.75px;
   &:hover {
     color: var(--primary-color);
+  }
+
+  &:active {
+    /* color: var(--off-white); */
     text-decoration: underline;
     text-underline-offset: 4px;
     text-decoration-thickness: 3px;

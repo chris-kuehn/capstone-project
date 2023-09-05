@@ -3,7 +3,10 @@ import styled from "styled-components";
 export default function StudioHeader() {
   return (
     <StyledStudioHeader>
-      <StyledStudioHeadline>Creative Coding</StyledStudioHeadline>
+      <h1>
+        Creative <br />
+        Coding
+      </h1>
       <p>
         Use the generator and experience how a geometric work of art is created
         from code and how randomness creates uniqueness.
@@ -25,6 +28,5 @@ const StyledStudioHeader = styled.header`
 `;
 
 const StyledStudioHeadline = styled.h1`
-  line-height: 2.25rem;
   padding-bottom: 0.5rem;
 `;
