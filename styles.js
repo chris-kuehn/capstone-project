@@ -48,7 +48,7 @@ h1, h2, h3, h4, h5, a {
 h1 {
   font-size: 2.5rem;
   line-height: 2.5rem;
-  padding-bottom: 1rem;
+  padding-bottom: .75rem;
 }
 
 h2 {

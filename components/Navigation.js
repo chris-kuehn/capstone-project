@@ -26,7 +26,9 @@ export default function Navigation({ pageStatus }) {
 const StyledGlobalNavigation = styled.nav`
   position: fixed;
   top: 0;
-  width: 375px;
+  width: 100%;
+  min-width: 375px;
+  max-width: 600px;
   background-color: var(--app-black);
 
   /* Code von ChatGTP */
