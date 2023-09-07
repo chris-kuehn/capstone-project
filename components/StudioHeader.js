@@ -158,7 +158,6 @@ export default function StudioHeader() {
 }
 
 const StyledStudioHeader = styled.header`
-  /* background-color: var(--primary-color); */
   min-width: 375px;
   max-width: 600px;
   width: 100%;
@@ -167,10 +166,6 @@ const StyledStudioHeader = styled.header`
   height: 100vw;
   margin: 0 auto;
   margin-top: 45px;
-  /* padding: 32px; */
-  /* display: flex;
-  flex-direction: column;
-  justify-content: end; */
   position: relative;
 `;
 
@@ -185,7 +180,6 @@ const StyledContentContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: end;
-  /* background-color: blue; */
 `;
 
 const BackgroundAnimation = styled.canvas`
@@ -193,5 +187,4 @@ const BackgroundAnimation = styled.canvas`
   height: 100%;
   position: absolute;
   z-index: -1;
-  /* background-color: yellow; */
 `;
