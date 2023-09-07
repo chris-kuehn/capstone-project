@@ -30,6 +30,7 @@ const StyledGlobalNavigation = styled.nav`
   min-width: 375px;
   max-width: 600px;
   background-color: var(--app-black);
+  z-index: 10;
 
   /* Code von ChatGTP */
   left: 50%;
