@@ -26,8 +26,11 @@ export default function Navigation({ pageStatus }) {
 const StyledGlobalNavigation = styled.nav`
   position: fixed;
   top: 0;
-  width: 375px;
+  width: 100%;
+  min-width: 375px;
+  max-width: 600px;
   background-color: var(--app-black);
+  z-index: 1;
 
   /* Code von ChatGTP */
   left: 50%;
@@ -43,10 +46,7 @@ const StyledListItemWrapper = styled.ul`
 const StyledListItem = styled.li`
   list-style: none;
   text-align: center;
-  /* Shorthand for 
-  flex-grow:1;
-  Flex-shrink:1;
-  flex-basis: 0%; */
+  /* Shorthand for - flex-grow:1; - Flex-shrink:1; - flex-basis: 0%; */
   flex: 1;
 
   &:first-child {
@@ -68,7 +68,6 @@ const StyledNavigationLink = styled(Link)`
   }
 
   &:active {
-    /* color: var(--off-white); */
     text-decoration: underline;
     text-underline-offset: 4px;
     text-decoration-thickness: 3px;
@@ -78,7 +77,6 @@ const StyledNavigationLink = styled(Link)`
     $isActive &&
     css`
       color: var(--primary-color);
-      /* background-color: var(--app-black); */
       text-decoration: underline;
       text-underline-offset: 4px;
       text-decoration-thickness: 3px;

@@ -10,24 +10,24 @@ export default function Canvas({ canvasParameter }) {
 
     // Beginn drawing statements
     context.fillStyle = `hsl(${canvasParameter.color}, 60%, 95%)`;
-    context.fillRect(0, 0, canvas.width, canvas.height);
+    context.fillRect(0, 0, 1080, 1080);
 
     context.fillStyle = `hsl(${canvasParameter.color}, 100%, 48%)`;
-    context.translate(150, 150);
+    context.translate(540, 540);
     context.rotate((canvasParameter.rotation * Math.PI) / 180);
-    context.fillRect(-40, -40, 80, 80);
+    context.fillRect(-100, -100, 200, 200);
 
     context.lineWidth = canvasParameter.lineWidthes[0];
     context.strokeStyle = `hsl(${canvasParameter.color}, 60%, 95%)`;
-    context.strokeRect(-22.5, -22.5, 45, 45);
+    context.strokeRect(-50, -50, 100, 100);
 
     context.strokeStyle = `hsl(${canvasParameter.color}, 100%, 48%)`;
 
     for (let i = 0; i <= canvasParameter.outline - 1; i++) {
-      let coordinateOnXAxis = -60 - 20 * i;
-      let coordinateOnYAxis = -60 - 20 * i;
-      let width = 120 + 40 * i;
-      let height = 120 + 40 * i;
+      let coordinateOnXAxis = -150 - 50 * i;
+      let coordinateOnYAxis = -150 - 50 * i;
+      let width = 300 + 100 * i;
+      let height = 300 + 100 * i;
       context.lineWidth = canvasParameter.lineWidthes[i];
       context.strokeRect(coordinateOnXAxis, coordinateOnYAxis, width, height);
     }
@@ -36,10 +36,11 @@ export default function Canvas({ canvasParameter }) {
     context.setTransform(1, 0, 0, 1, 0, 0);
     // End drawing statements
   }, [canvasParameter, canvasRef]);
-  return <StyledCanvas width="300" height="300" ref={canvasRef} />;
+  return <StyledCanvas width="1080" height="1080" ref={canvasRef} />;
 }
 
 const StyledCanvas = styled.canvas`
   border: 1px solid black;
+  width: 100%;
   margin-bottom: 1rem;
 `;
