@@ -92,19 +92,38 @@ export default function GalleryHeader() {
       context.fillStyle = `hsla(148, 100%, 93%, 1)`;
       context.beginPath();
       context.lineWidth = 10;
-      context.rect(700, 400, 400, 400);
+      context.translate(900, 600);
+      context.rotate((45 * Math.PI) / 180);
+      context.rect(-200, -200, 400, 400);
       context.fill();
       context.stroke();
 
-      // artwork symbol
-      context.translate(900, 600);
+      // artwork middle symbol
       context.beginPath();
-      context.rotate((45 * Math.PI) / 180);
-      context.rect(-50, -50, 100, 100);
+      context.rect(-100, -100, 200, 200);
       context.fill();
       context.stroke();
       context.rotate(-(45 * Math.PI) / 180);
       context.translate(-900, -600);
+
+      // artwork left symbol
+      context.translate(450, 600);
+      context.rotate((45 * Math.PI) / 180);
+      context.beginPath();
+      context.rect(-50, -50, 100, 100);
+      context.fill();
+      context.stroke();
+      context.rotate(-(45 * Math.PI) / 180);
+      context.translate(-450, -600);
+      // artwork left symbol
+      context.translate(1350, 600);
+      context.rotate((45 * Math.PI) / 180);
+      context.beginPath();
+      context.rect(-50, -50, 100, 100);
+      context.fill();
+      context.stroke();
+      context.rotate(-(45 * Math.PI) / 180);
+      context.translate(-1350, -600);
     }
 
     animate();
