@@ -20,7 +20,7 @@ export default function GalleryHeader() {
       return ranNeg;
     }
 
-    let animationSpeed = 2;
+    let animationSpeed = 3;
     let x = 200;
     let changeX = 10;
 
@@ -51,17 +51,17 @@ export default function GalleryHeader() {
       y = y + changeY;
 
       if (x >= 1800 - 800) {
-        changeX = randomNegativValue();
+        changeX = randomNegativValue() - 1;
       }
       if (x <= 0) {
-        changeX = randomPositivValue();
+        changeX = randomPositivValue() + 1;
       }
 
       if (y >= 1800 - 800) {
-        changeY = randomNegativValue();
+        changeY = randomNegativValue() - 1;
       }
       if (y <= 0) {
-        changeY = randomPositivValue();
+        changeY = randomPositivValue() + 1;
       }
       // animated circle two
       context.fillStyle = `hsla(148, 100%, 60%, 0.4)`;
@@ -105,7 +105,6 @@ export default function GalleryHeader() {
       context.stroke();
       context.rotate(-(45 * Math.PI) / 180);
       context.translate(-900, -600);
-
       // artwork left symbol
       context.translate(450, 600);
       context.rotate((45 * Math.PI) / 180);
