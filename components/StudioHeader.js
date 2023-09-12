@@ -20,7 +20,7 @@ export default function StudioHeader() {
       return ranNeg;
     }
 
-    let animationSpeed = 2;
+    let animationSpeed = 8;
     let x = 200;
     let changeX = 10;
 
@@ -50,14 +50,14 @@ export default function StudioHeader() {
       y = y + changeY;
 
       if (x >= 1800 - 400) {
-        changeX = randomNegativValue();
+        changeX = randomNegativValue() - 2;
       }
       if (x <= 400) {
         changeX = randomPositivValue();
       }
 
       if (y >= 1800 - 400) {
-        changeY = randomNegativValue();
+        changeY = randomNegativValue() - 2;
       }
       if (y <= 400) {
         changeY = randomPositivValue();
@@ -76,14 +76,14 @@ export default function StudioHeader() {
         changeX2 = randomNegativValue() - 3;
       }
       if (x2 <= 200) {
-        changeX2 = randomPositivValue() + 3;
+        changeX2 = randomPositivValue() + 2;
       }
 
       if (y2 >= 1800 - 200) {
         changeY2 = randomNegativValue() - 3;
       }
       if (y2 <= 200) {
-        changeY2 = randomPositivValue() + 3;
+        changeY2 = randomPositivValue() + 2;
       }
 
       // slider1 symbol line
