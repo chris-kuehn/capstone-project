@@ -20,7 +20,7 @@ export default function GalleryHeader() {
       return ranNeg;
     }
 
-    let animationSpeed = 3;
+    let animationSpeed = 8;
     let x = 200;
     let changeX = 10;
 
